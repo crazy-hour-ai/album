@@ -6,7 +6,7 @@
 
 
 <div class="album-details" fxLayout="row" fxLayoutAlign="space-around">
-        <mat-form-field fx>
+        <!-- <mat-form-field fx> -->
 
                 <h1> Album List </h1>
 
@@ -16,10 +16,14 @@
                 
                 <div *ngFor="let i of albumListFromAdd">
                 <div><strong>{{  i.albumName }}</strong></div>
+                <div><strong>{{  i.artist }}</strong></div>
+                <div><strong>{{  i.rating }}</strong></div>
+
+
                     <!-- <div>{{  }}</div> -->
                 </div>
             <!-- <input type="text" name="albumName" id="albumName" placeholder="Album name" required ngModel matInput> -->
-        </mat-form-field>
+        <!-- </mat-form-field> -->
 
       
     </div>

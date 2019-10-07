@@ -1,6 +1,6 @@
 <!-- <p>collection works!</p> -->
 
-<form #form="ngForm" ngSubmit="processForm(form)" fxLayout="column" fxLayoutGap="3vh" fxLayoutAlign="start center">
+<form #form="ngForm" (ngSubmit)="processForm(form)" fxLayout="column" fxLayoutGap="3vh" fxLayoutAlign="start center">
 
     <div class="album-details" fxLayout="row" fxLayoutAlign="space-around">
         <mat-form-field>
@@ -22,7 +22,7 @@
                 <div mat-card-avatar class="example-header-image"></div>
             </mat-card-header>
             <img mat-card-image
-            src="https://images-na.ssl-images-amazon.com/images/I/41U4wqr1xbL._SY355_.jpg"
+            src="x"
                 alt="">
             <mat-card-content>
                 <p>

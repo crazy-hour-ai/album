@@ -1,9 +1,9 @@
-export interface AlbumList {
+export interface Album{
 
     albumName: string;
     artist: string;
     albumCoverImage?: string;
-    rating?: number;
+    rating: number;
   
   }
   

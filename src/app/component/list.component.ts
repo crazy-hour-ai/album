@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AlbumList } from '../models';
+import { Album } from '../models';
 
 @Component({
   selector: 'app-list',
@@ -8,7 +8,7 @@ import { AlbumList } from '../models';
 })
 export class ListComponent implements OnInit {
 
-  @Input() albumListFromAdd: AlbumList[] = [];
+  @Input() albumListFromAdd: Album[] = [];
 
   constructor() { }
 

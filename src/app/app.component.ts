@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlbumList } from './models'
+import { Album} from './models'
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,11 @@ import { AlbumList } from './models'
 })
 export class AppComponent {
   title = 'my-Vinyl-collection';
-  albumlist : AlbumList;
+  album : Album;
 
-  albumListArray: AlbumList[] = []
+  albumListArray: Album[] = [];
 
-  addToAlbumList($event: AlbumList){
+  addToAlbumList($event: Album){
     console.log('Album list: ' , $event);
 
     this.albumListArray.push( $event );

@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AlbumList } from '../models';
+import { Album} from '../models';
 
 @Component({
   selector: 'app-collection',
@@ -9,11 +9,13 @@ import { AlbumList } from '../models';
 })
 export class CollectionComponent implements OnInit {
 
-  @Output() addNewAlbum = new EventEmitter<AlbumList>();
+  @Output() addNewAlbum = new EventEmitter<Album>();
   
-  albumObject : AlbumList;
+  albumObject : Album;
 
   processForm(form: NgForm) {
+
+    console.info('process form');
     const values = form.value;
 
     const albumObject = {
@@ -24,8 +26,8 @@ export class CollectionComponent implements OnInit {
     }
     
     this.addNewAlbum.emit(albumObject);
-    console.log('Album object is: ' + albumObject);
-    form.reset();
+    console.log('Album object is: ' , albumObject);
+    form.resetForm();
   }
 
   constructor() { }
