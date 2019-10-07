@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Album} from '../models';
+import { ConcatSource } from 'webpack-sources';
 
 @Component({
   selector: 'app-collection',
@@ -21,12 +22,13 @@ export class CollectionComponent implements OnInit {
     const albumObject = {
         albumName : form.value.albumName,
         artist : form.value.artist,
-        albumCoverImage : null,
-        rating : null
+        albumCoverImage : form.value.albumCoverImage,
+        rating : form.value.rating
     }
     
     this.addNewAlbum.emit(albumObject);
     console.log('Album object is: ' , albumObject);
+    console.log('form:', form );
     form.resetForm();
   }
 

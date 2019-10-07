@@ -1,14 +1,12 @@
 <!-- <p>list works!</p> -->
 
 
+<!-- <div class="album-details" fxLayout="row" fxLayoutAlign="space-around"> -->
 
+    <!-- <mat-form-field fx> -->  
+    <!--dont use mat-form-field for html tag, mat-form field is form,only for input -->
 
-
-
-<div class="album-details" fxLayout="row" fxLayoutAlign="space-around">
-        <!-- <mat-form-field fx> -->
-
-                <h1> Album List </h1>
+                <!-- <h1> Album List </h1>
 
                 <div *ngIf="albumListFromAdd.length == 0">
                   <h4>Your album list is empty</h4>
@@ -17,13 +15,49 @@
                 <div *ngFor="let i of albumListFromAdd">
                 <div><strong>{{  i.albumName }}</strong></div>
                 <div><strong>{{  i.artist }}</strong></div>
+                <div><img [src]= "i.albumCoverImage" >    </div>
                 <div><strong>{{  i.rating }}</strong></div>
-
-
-                    <!-- <div>{{  }}</div> -->
-                </div>
+                </div> -->
             <!-- <input type="text" name="albumName" id="albumName" placeholder="Album name" required ngModel matInput> -->
-        <!-- </mat-form-field> -->
+    <!-- </mat-form-field> -->
+<!-- </div> -->
 
-      
-    </div>
+  
+<div *ngIf="albumListFromAdd.length <= 0" fxLayout="row" fxLayoutAlign="space-around" >
+    <mat-label>You currently have no Vinyl in your collection</mat-label>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-around" fxLayoutGap = "30px" fxLayoutWrap >
+
+        <mat-card *ngFor="let i of albumListFromAdd" class="example-card" >
+    
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <img mat-card-avatar [src]="i.albumCoverImage">
+            
+                    <mat-card-title>{{  i.albumName }}</mat-card-title>
+                    <mat-card-subtitle>{{ i.artist}}</mat-card-subtitle>
+                    <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+                    <mat-card-subtitle>{{i.rating}}</mat-card-subtitle>
+
+                </mat-card-header>
+            
+                <img mat-card-image [src]="i.albumCoverImage">
+                <mat-card-content>
+                        <p>
+                          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                          bred for hunting.
+                        </p>
+                </mat-card-content>
+            
+            
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            
+            </mat-card>
+</div>
+
+
