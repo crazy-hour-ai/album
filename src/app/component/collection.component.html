@@ -4,7 +4,7 @@
 
     <div class="album-details" fxLayout="row" fxLayoutAlign="space-around">
         <mat-form-field>
-            <input type="text" name="album-name" id="album-name" placeholder="Album name" required ngModel matInput>
+            <input type="text" name="albumName" id="albumName" placeholder="Album name" required ngModel matInput>
         </mat-form-field>
 
         <mat-form-field>
@@ -12,15 +12,18 @@
         </mat-form-field>
     </div>
 
+    <mat-form-field>
+        <input type="text" name="albumCoverImage" id="albumCoverImage" ngModel matInput>
+    </mat-form-field>
 
     <div class="album-card" >
         <mat-card class="example-card">
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
             </mat-card-header>
-            <img mat-card-image
-                src="https://images-na.ssl-images-amazon.com/images/I/41U4wqr1xbL._SY355_.jpg"
-                alt="">
+            <!-- <img mat-card-image
+                [src] ="albumCoverImage"
+                alt=""> -->
             <mat-card-content>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -28,15 +31,16 @@
                 </p>
             </mat-card-content>
             <mat-card-actions fxLayoutAlign ="center">
-                <mat-slider name="rating" min="0" max="10" step="1" thumbLabel ngModel> 
+                <mat-slider name="rating" min="0" max="10" step="1" default = "5" thumbLabel ngModel> 
                 </mat-slider> <br>
             </mat-card-actions>
-            <mat-label>Rating!!</mat-label>
+            <!-- <mat-label>Rating!!</mat-label> -->
 
         </mat-card>
     </div>
 
 
+                <!-- src="https://images-na.ssl-images-amazon.com/images/I/41U4wqr1xbL._SY355_.jpg" -->
 
     <!-- <div class="album-cover-image" width="50px">
         <mat-form-field>

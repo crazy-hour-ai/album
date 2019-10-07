@@ -1,0 +1,25 @@
+<!-- <p>list works!</p> -->
+
+
+
+
+
+
+<div class="album-details" fxLayout="row" fxLayoutAlign="space-around">
+        <mat-form-field fx>
+
+                <h1> Album List </h1>
+
+                <div *ngIf="albumListFromAdd.length == 0">
+                  <h4>Your album list is empty</h4>
+                </div>
+                
+                <div *ngFor="let i of albumListFromAdd">
+                <div><strong>{{  i.albumName }}</strong></div>
+                    <!-- <div>{{  }}</div> -->
+                </div>
+            <!-- <input type="text" name="albumName" id="albumName" placeholder="Album name" required ngModel matInput> -->
+        </mat-form-field>
+
+      
+    </div>

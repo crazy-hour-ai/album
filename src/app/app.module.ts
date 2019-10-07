@@ -6,13 +6,15 @@ import { CollectionComponent } from './component/collection.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
+import { ListComponent } from './component/list.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CollectionComponent
+    CollectionComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

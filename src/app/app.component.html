@@ -6,6 +6,8 @@
 </mat-toolbar>
 
 
-<app-collection>
-
+<app-collection 
+    (addNewAlbum) = "addToAlbumList($event)" >
 </app-collection>
+
+<app-list [albumListFromAdd]= "albumListArray" ></app-list>
