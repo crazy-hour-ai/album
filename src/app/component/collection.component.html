@@ -1,0 +1,64 @@
+<!-- <p>collection works!</p> -->
+
+<form #form="ngForm" ngSubmit="processForm(form)" fxLayout="column" fxLayoutGap="3vh" fxLayoutAlign="start center">
+
+    <div class="album-details" fxLayout="row" fxLayoutAlign="space-around">
+        <mat-form-field>
+            <input type="text" name="album-name" id="album-name" placeholder="Album name" required ngModel matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" name="artist" id="artist" placeholder="Artist" required ngModel matInput>
+        </mat-form-field>
+    </div>
+
+
+    <div class="album-card" >
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <img mat-card-image
+                src="https://images-na.ssl-images-amazon.com/images/I/41U4wqr1xbL._SY355_.jpg"
+                alt="">
+            <mat-card-content>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eum aperiam tenetur harum architecto! Nam maxime officiis,
+                </p>
+            </mat-card-content>
+            <mat-card-actions fxLayoutAlign ="center">
+                <mat-slider name="rating" min="0" max="10" step="1" thumbLabel ngModel> 
+                </mat-slider> <br>
+            </mat-card-actions>
+            <mat-label>Rating!!</mat-label>
+
+        </mat-card>
+    </div>
+
+
+
+    <!-- <div class="album-cover-image" width="50px">
+        <mat-form-field>
+            <input type="text" name="album-cover-image" id="album-cover-image" ngModel matInput>
+        </mat-form-field>
+
+        <div class="rating">
+            <mat-label> Rating </mat-label> -->
+    <!-- <input type="text" name="rating" id="rating"  placeholder="Rating" ngModel matInput> -->
+    <!-- <mat-slider name="rating" min="0" max="10" step="1" thumbLabel tickInterval="1" ngModel>
+
+            </mat-slider>
+        </div>
+    </div> -->
+
+
+
+
+
+
+    <button type="submit" mat-raised-button color="primary"> Add Vinyl Details</button>
+    <button type="reset" mat-button color="warn"> Clear </button>
+
+
+</form>
